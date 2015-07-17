@@ -17,6 +17,16 @@ public class Graphic {
         frame.setSize(new Dimension(500, 600));
         frame.setVisible(true);
         frame.add(content.getTextArea());
+        this.start();
+    }
+
+    public void start()
+    {
+        boolean ans = content.startPrompt();
+        while(ans == false)
+        {
+            ans = content.startPrompt();
+        }
     }
 
 
